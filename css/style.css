@@ -1,0 +1,289 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.navbar-container {
+    background-color: #302E44; /* Couleur de fond pour le conteneur de la navbar */
+    padding: 20px 0; /* Espace autour de la navbar */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.navbar__menus,
+.navbar__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar__menu--p li,
+.navbar__menu--a li,
+.navbar__contact > div,
+.linkedin-logo,
+.login-link,
+.button {
+    margin-right: 10px;
+}
+
+.navbar__menu--p li p {
+    font-size: 11px;
+}
+
+.navbar__menu--a li a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: medium;
+    color: #302E44;
+}
+
+.navbar__logo-container,
+.navbar__contact > div,
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo {
+    width: 10rem;
+}
+
+.navbar__contact > div {
+    display: flex;
+    gap: 10px; 
+  }
+  
+  .navbar__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+
+.navbar__contact > div,
+.linkedin-logo,
+.login-link,
+.button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar__contact > div > p {
+    margin-right: 10px; /* ou toute autre valeur qui vous convient */
+}
+
+
+.fa-linkedin-in {
+    width: 15px;
+    height: 15px;
+    color: black;
+    margin-right: 10px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+}
+
+
+.button {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button--trial {
+    background-color: white;
+    color: #302E44;
+    font-weight: bold;
+    font-size: 14px;
+    border: #302E44 2px solid;
+    border-radius: 10px;
+}
+
+.button--demo {
+    background-color: #00EA99;
+    color: #302E44;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.navbar__menus {
+    position: relative;
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #00ea99;
+    margin-left: 8px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 594px;
+    border: 1px solid #ccc;
+    display: flex; 
+    flex-direction: row;
+    z-index: 1;
+}
+
+.dropdown-column {
+    flex-basis: 50%;
+}
+
+.dropdown-item {
+    padding: 5px;
+
+}
+
+.dropdown-item h4 { 
+    font-size: 14px;
+}
+
+.dropdown-item p { 
+    font-size: 10px;
+    color: #2F2E41;
+}
+
+.dropdown-item a { 
+    list-style: none;
+}
+
+.dropdown-item h4 {
+    margin: 0; 
+    padding: 0; 
+}
+
+.dropdown-item a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    padding: 5px 0; 
+    color: #2F2E41;
+}
+
+.dropdown-item {
+    padding: 10px; 
+}
+
+
+.header-section {
+    background-color: #302E44;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.rgpd-score h1 span {
+    display: block;
+}
+
+.rgpd-score, .rgpd-svg {
+    flex: 1;
+    padding-top: 20px;
+    /* padding: 20px; */
+}
+
+.rgpd-score h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rgpd-score p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button--score {
+    background-color: #00EA99;
+    color: #302E44;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.button--video {
+    background-color: #302E44;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    padding: 15px;
+}
+
+.button--video i {
+    margin-right: 8px;
+}
+
+.rgpd-svg img {
+    max-width: 100%;
+}
+
+.rgpd-svg {
+    flex: 1;
+    position: relative;
+}
+
+.rgpd-svg::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    right: 50%; 
+    width: 150vw; 
+    height: 1px; 
+    background: white;
+    transform: translateX(-50%); 
+}
