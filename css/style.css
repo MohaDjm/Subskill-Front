@@ -64,6 +64,14 @@
     align-items: center;
 }
 
+.navbar__logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* centre le logo */
+    align-items: center;
+    position: relative; /* car le menu hamburger sera positionné par rapport à ce conteneur */
+}
+
 .navbar__logo {
     width: 10rem;
 }
@@ -200,6 +208,137 @@
     padding: 10px; 
 }
 
+/* MENU HAMBURGER */
+
+/* Ajoutez ces styles pour gérer l'affichage de vos menus avec la classe .active */
+.navbar__menus.active, .navbar__contact.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2F2E41;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.menu-hamburger {
+    cursor: pointer;
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 15px; /* ou la valeur que vous préférez */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-hamburger .bar1, 
+.menu-hamburger .bar2, 
+.menu-hamburger .bar3 {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+}
+
+@media (max-width: 1580px) {
+    .menu-hamburger {
+        display: flex;
+    }
+    .navbar__contact, .navbar__menus {
+        display: none;
+    }
+}
+
+/* Lorsque le menu est ouvert, on ajoute la classe .open au menu hamburger */
+.menu-hamburger.open .bar1 {
+    transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.menu-hamburger.open .bar2 {
+    opacity: 0;
+}
+
+.menu-hamburger.open .bar3 {
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+
+/* SOUS MENU */
+
+/* Styles pour le sous-menu */
+
+.navbar__submenu{
+    display: none;
+}
+
+.submenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2F2E41;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.submenu.active {
+    display: block;
+}
+
+.go-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: #00EA99;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.submenu h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.submenu-items {
+    list-style: none;
+    padding: 0;
+}
+
+.submenu-items li {
+    margin-bottom: 10px;
+}
+
+.submenu-items a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.submenu-items a:hover {
+    background-color: #00EA99;
+}
+
+/* PREMIERE SECTION */
 
 .header-section {
     background-color: #302E44;
@@ -210,7 +349,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
     max-width: 70%;
     margin: auto;
     margin-right: 100px;
@@ -269,6 +408,7 @@
 
 .rgpd-svg img {
     max-width: 100%;
+    display: block;
 }
 
 .rgpd-svg {
@@ -276,17 +416,26 @@
     position: relative;
 }
 
-.rgpd-svg::after {
-    content: "";
-    position: absolute;
-    bottom: 0; 
-    left: 50%; 
-    right: 50%; 
-    width: 150vw; 
-    height: 1px; 
-    background: white;
-    transform: translateX(-50%); 
+.parent-of-rgpd-svg {
+    position: relative;
 }
+
+
+.border-line {
+    height: 1px;
+    background: white;
+    width: 100vw;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+
 
 .ask-demo {
     display: flex;
@@ -321,44 +470,6 @@
 }
 
 
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.prestations {
-    text-align: center;
-    margin-bottom: 40px;
-    width: 70%;
-}
-
-.prestations h1 {
-    color: #302E44;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-}
-
-.card {
-    width: 30%;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
-}
-
-.card img {
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    width: 50px;
-}
 
 .button {
     background-color: #00EA99;
@@ -371,9 +482,190 @@
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
+    display: inline-block;
 }
 
 .highlight {
-    color: #00EA99; 
+    color: #00EA99;
 }
 
+/* ====== Styles des services et des cartes ====== */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px; 
+    z-index: 10; 
+    position: relative; 
+    background-color: white; 
+    width: 70%;
+    margin-left: auto; 
+    margin-right: auto; 
+    border-top-left-radius: 20px;  
+    border-top-right-radius: 20px; 
+}
+
+
+.prestations {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 70%;
+    z-index: 1;
+}
+
+.prestations h1 {
+    margin-top: 50px;
+    gap: 20vw;
+    color: #302E44;
+    font-size: 40px;
+    font-weight: bold;
+}
+.prestations p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative; 
+}
+
+.card img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 70px;
+}
+
+.card h1 {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 85px;
+}
+
+.card p {
+    text-align: left;
+    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card button {
+    background-color: #302E44;
+    color: white;
+}
+
+.cards .card:first-child img {
+    background-color: #00EA99;
+    border-radius: 10px;
+}
+
+.cards .card:nth-child(2) {
+    background-color: #302E44;
+}
+
+.cards .card:nth-child(2) .button {
+    background-color: white;
+    color: #302E44;
+}
+
+.cards .card:nth-child(2) h1, .card:nth-child(2) p  {
+    color: white;
+}
+
+/* ====== Media Queries ====== */
+
+@media (max-width: 1024px) {
+    .card {
+        width: 78%;
+    }
+}
+
+@media (max-width: 768px) {
+    .prestations, .cards {
+        width: 90%;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* ====== Styles de la section "Solution RGPD" ====== */
+
+.solution-rgpd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-left: 15%;
+  }
+
+.decouvrir-rgpd  .part1, .part2 {
+    display: block; 
+  }
+  
+  
+  .decouvrir-rgpd,
+  .stock {
+    flex: 1;
+    width: 35%; /* Vous pouvez ajuster ce pourcentage en fonction de vos besoins */
+  }
+  
+  .solution-rgpd div {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Aligne les éléments à gauche */
+  }
+  
+  .button--solution {
+    margin-top: 50px;
+    margin-bottom: 50px; /* Espacement entre le bouton et l'image */
+  }
+  
+  .decouvrir-rgpd {
+    flex: 1;
+    width: 35%; 
+    margin-top: 20rem; 
+}
+
+.button--solution {
+    background-color: #302E44;
+    color: white;
+}
+
+.decouvrir-rgpd h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #302E44;
+    margin-bottom: 20px;
+}
+
+.decouvrir-rgpd ul {
+    list-style-type: disc;
+    font-size: 14px;
+}
+
+.decouvrir-rgpd ul li {
+    margin-bottom: 10px;
+}
+
+/* Pour mettre en gras les mots enveloppés par la balise <strong> */
+strong {
+    font-weight: bold;
+}
