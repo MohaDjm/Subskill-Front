@@ -676,6 +676,9 @@ strong {
     height: auto;
 }
 
+.wrapper {
+    background-color: #F5F5F5;  
+}
 
 .test-mission {
     background-color: #302E44;
@@ -727,3 +730,125 @@ strong {
     margin-bottom: 20px;
 }
 
+
+/* Pour la section temoignage */
+
+
+.temoignage {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-top: 10vh;
+}
+  
+.temoignage__img, 
+.temoignage__text {
+    flex: 1;
+}
+  
+.temoignage__img {
+    order: 1;
+}
+
+.temoignage__img h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10rem;
+    color: #302E44;
+}
+
+.poste-entreprise {
+    color: #787878;
+    font-size: 14px;
+}
+
+
+
+.temoignage__text p {
+    max-width: 70%; 
+    margin-bottom: 30px;
+}
+
+
+.temoignage__text h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.temoignage__text {
+    order: 2;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+/* Pour le slider */
+
+.slider-container {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+}
+  
+.slider {
+    display: flex;
+    flex-direction: row; 
+    transition: transform 0.3s ease-out;
+    width: 300%; 
+}
+  
+.slide {
+    flex: 0 0 33.3333%; 
+    max-width: 33.3333%; 
+    margin: 0; 
+    padding: 0; 
+    scroll-snap-align: start;
+}
+  
+.prev, .next {
+    position: absolute;
+    top: 0px; 
+    right: 0px; 
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent; 
+    border: none;
+    font-size: 40px; 
+}
+
+.prev {
+    top: 50px; 
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+/* Ajout de styles pour l'indicateur */
+
+.slider-indicator {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .slider-indicator::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    --thumb-width: 33.33%;
+    background-color: #00EA99;
+    width: var(--thumb-width);
+    height: 10px;    
+    cursor: pointer;
+}
+
+  
+  .slider-indicator::-webkit-slider-runnable-track {
+    background-color: #A3A3A3;
+    height: 1px;
+  }
