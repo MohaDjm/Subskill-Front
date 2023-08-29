@@ -852,3 +852,202 @@ button:disabled {
     background-color: #A3A3A3;
     height: 1px;
   }
+
+
+/* Pour la section "Questions" */
+
+/* Styling de la section RGPD */
+.question-rgpd {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage vertical des éléments */
+  }
+  
+  /* Styling du titre */
+  .question-rgpd h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 40px;
+    color: #302E44;
+  }
+  
+  /* Styling du conteneur principal de la question */
+  .question {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Styling du conteneur des cartes et du bouton */
+  .question__cards-container {
+    width: 55%;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* Conteneur pour les cartes */
+  .question__cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Styling des cartes */
+  .question__cards {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    height: 200px; /* Hauteur fixe pour les rectangles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.question__cards p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.question__cards a {
+    margin-top: 20px;
+  }
+  
+  .question__cards:nth-child(1) {
+    background-color: #B3F9E0;
+  }
+  
+  .question__cards:nth-child(2) {
+    background-color: #302E44;
+  }
+
+  .question__cards:nth-child(2) p {
+    color: white;
+  }
+
+  .question__cards:nth-child(2) .fa-circle-chevron-right{
+    color: white;
+  }
+  
+  .question__cards:nth-child(3) {
+    background-color: #F9F9F9;
+    flex: 0.8;
+  }
+  
+  /* Styling du bouton */
+  .button--question {
+    margin-top: 5rem;
+    background-color: #2F2E41;
+    color: white;
+    align-self: flex-start;
+  }
+  
+  /* Styling de l'image */
+  .question-rgpd img {
+    align-self: flex-end;
+    width: 20%;
+  }
+
+  .question__cards .fa-circle-chevron-right {
+    color: #302E44;
+    margin-right: 10px;
+  }
+
+
+    /* Pour la section "Articles" */
+
+/* Styling de la section RGPD Articles */
+.articles-rgpd-bg {
+    background-color: #302E44;
+    padding-bottom: 7rem;
+}
+
+.articles-rgpd {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Conteneur des cartes */
+  .article-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Style des cartes */
+  .article-card {
+    width: 20%;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+  }
+
+.article-card a {
+    text-decoration: none;
+}
+
+  .article-card:nth-child(2) h2 {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+
+.article-card h2, .article-card p {
+    color: white;
+}
+  .articles-rgpd h1 {
+    color: white;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 7rem;
+    margin-left: 10rem;
+  }
+  
+  .article-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .article-date {
+    font-size: 12px;
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .article-tag {
+    font-size: 14px;
+    color: #00EA99 !important;
+  }
+  
+  .article-card h2 {
+    font-size: 16px;
+    margin-top: 0.5rem;
+  }
+  
+  .article-card p {
+    font-size: 14px;
+  }
+
+  .article-date, .article-tag, .article-card h2, .article-card p {
+    margin-bottom: 1rem; 
+  }
+  
+  
+  .button--articles {
+    background-color: white;
+    color: #302E44;
+    padding: 20px 20px; 
+    border: none; 
+    border-radius: 6px; /* Coins arrondis */
+    font-size: 14px; 
+    margin: 2rem auto; 
+    margin-top: 5rem;
+    display: block; 
+  }
+  
