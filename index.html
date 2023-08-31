@@ -20,50 +20,57 @@
                 <li><p>Calculer mes économies</p></li>
             </ul>
             <ul class="navbar__menu navbar__menu--a">
-                <li><a href="#" class="has-dropdown">Solutions</a></li>
-                <li><a href="#" class="has-dropdown">Services</a></li>
-                <li><a href="#" class="has-dropdown">Entreprise</a></li>
-                <li><a href="#" class="has-dropdown">Ressources</a></li>
-                <li><a href="#">Blog</a></li> 
+                <li>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                    <div class="dropdown dropdown-solutions" aria-labelledby="Solutions">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#">Centre de formation</a></li>
+                            <li class="dropdown-item"><a href="#">Experts comptables</a></li>
+                            <li class="dropdown-item"><a href="#">Campings</a></li>
+                            <li class="dropdown-item"><a href="#">E-commerce</a></li>
+                            <li class="dropdown-item"><a href="#">Associations</a></li>
+                            <li class="dropdown-item"><a href="#">Immobilier</a></li>
+                            <li class="dropdown-item"><a href="#">Ressources Humaines</a></li>
+                            <li class="dropdown-item"><a href="#">Conseil</a></li>
+                        </ul>
+                    </div>
+                </li>                                
+                <li>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown dropdown-services" aria-labelledby="Services">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#">Accompagnement</a></li>
+                            <li class="dropdown-item"><a href="#">Formation OPCO</a></li>
+                            <li class="dropdown-item"><a href="#">Assistance DPO</a></li>
+                            <li class="dropdown-item"><a href="#">Obtention du label RGPD engagé</a></li>
+                            <li class="dropdown-item"><a href="#">Audit du site internet</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Entreprise</a>
+                    <div class="dropdown dropdown-entreprise" aria-labelledby="Entreprise">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#">Qui sommes-nous ?</a></li>
+                            <li class="dropdown-item"><a href="#">Devenir partenaire</a></li>
+                            <li class="dropdown-item"><a href="#">Recrutement</a></li>
+                            <li class="dropdown-item"><a href="#">Nos clients</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Ressources</a>
+                    <div class="dropdown dropdown-ressources" aria-labelledby="Ressources">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#">Livres blancs</a></li>
+                            <li class="dropdown-item"><a href="#">Webinaire</a></li>
+                            <li class="dropdown-item"><a href="#">Fiches pratiques</a></li>
+                            <li class="dropdown-item"><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Blog</a></li>            
             </ul>
-            <div class="dropdown">
-                <div class="dropdown-column">
-                    <div class="dropdown-item">
-                        <h4><a href="#">Centre de formation</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">Campings</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">Associations</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">Ressources Humaines</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="dropdown-column">
-                    <div class="dropdown-item">
-                        <h4><a href="#">Experts comptables</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">E-commerce</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">Immobilier</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <h4><a href="#">Conseil</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>            
         </div>
         <div class="navbar__logo-container">
             <img src="assets/logo.png" alt="Logo de Mission RGPD" class="navbar__logo" />

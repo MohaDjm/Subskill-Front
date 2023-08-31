@@ -1,15 +1,91 @@
 // Menu dropdown
 
 
-document.querySelectorAll('.has-dropdown').forEach(function (item) {
-    item.addEventListener('mouseover', function () {
-        document.querySelector('.dropdown').style.display = 'flex';
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggles = document.querySelectorAll(".has-dropdown");
+    let activeDropdown = null;
+  
+    dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("mouseover", function(e) {
+            if (activeDropdown) {
+                activeDropdown.classList.remove("show");
+            }
+            const dropdownMenu = this.nextElementSibling;
+            this.setAttribute("aria-expanded", "true");
+            dropdownMenu.classList.add("show");
+            activeDropdown = dropdownMenu;
+        });
+
+        // Écoute également les événements de survol sur le menu déroulant lui-même
+        toggle.nextElementSibling.addEventListener("mouseover", function(e) {
+            this.classList.add("show");
+            activeDropdown = this;
+        });
+        
+        toggle.nextElementSibling.addEventListener("mouseout", function(e) {
+            this.classList.remove("show");
+            activeDropdown = null;
+        });
     });
 });
 
-document.querySelector('.navbar__menus').addEventListener('mouseleave', function () {
-    document.querySelector('.dropdown').style.display = 'none';
-});
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const dropdownTriggers = document.querySelectorAll('.has-dropdown');
+//     let timer; // Ajout d'un timer
+
+//     dropdownTriggers.forEach(trigger => {
+//         trigger.addEventListener('mouseenter', function() {
+//             clearTimeout(timer); // Annuler le timer précédent
+//             const dropdownClass = 'dropdown-' + this.textContent.toLowerCase();
+//             const dropdownElement = document.querySelector(`.${dropdownClass}`);
+
+//             if (dropdownElement) {
+//                 dropdownElement.style.display = 'flex';
+//                 dropdownElement.style.zIndex = 100;
+//                 dropdownElement.style.transition = 'all 0.3s ease-in-out';
+//             }
+
+//             // Vérifier si un autre élément est en survol
+//             const otherDropdownElement = document.querySelector('.dropdown.flex');
+//             if (otherDropdownElement) {
+//                 // Annuler le timer et fermer le menu déroulant
+//                 clearTimeout(timer);
+//                 otherDropdownElement.style.display = 'none';
+//             }
+//         });
+
+//         trigger.addEventListener('mouseleave', function() {
+//             const dropdownClass = 'dropdown-' + this.textContent.toLowerCase();
+//             const dropdownElement = document.querySelector(`.${dropdownClass}`);
+
+//             // Annuler le timer
+//             clearTimeout(timer);
+
+//             // Fermer le menu déroulant après 0.3 seconde
+//             timer = setTimeout(() => {
+//                 if (dropdownElement) {
+//                     dropdownElement.style.display = 'none';
+//                 }
+//             }, 300);
+//         });
+//     });
+
+//     // Annuler la fermeture du menu si la souris est dans la zone du menu déroulant
+//     document.querySelectorAll('.dropdown').forEach(dropdown => {
+//         dropdown.addEventListener('mouseenter', () => {
+//             clearTimeout(timer);
+//         });
+//         dropdown.addEventListener('mouseleave', function() {
+//             dropdown.style.display = 'none';
+//             dropdown.style.zIndex = 0;
+//         });
+//     });
+// });
 
 // Menu hamburger
 

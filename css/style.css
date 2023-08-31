@@ -145,6 +145,8 @@
     position: relative;
 }
 
+/* Menu dropdown */
+
 .has-dropdown {
     position: relative;
 }
@@ -167,6 +169,9 @@
     border: 1px solid #ccc;
     flex-direction: row;
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .dropdown-column {
@@ -207,6 +212,43 @@
 .dropdown-item {
     padding: 10px; 
 }
+
+.show {
+    display: block !important;
+}
+
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    padding: 10px;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.has-dropdown:hover {
+    color: #007bff;  
+}
+
+.dropdown-item a:hover {
+    transform: rotate(1deg);
+    transition: transform 0.3s ease;
+    background-color: #e6f7ff; 
+    color: #0056b3; 
+}
+
+
 
 /* MENU HAMBURGER */
 
@@ -255,6 +297,18 @@
     }
     .navbar__contact, .navbar__menus {
         display: none;
+    }
+}
+
+@media (max-width: 1580px) {
+    .navbar__logo {
+        width: 8rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .navbar__logo {
+        width: 5rem;
     }
 }
 
@@ -436,6 +490,7 @@
         flex-direction: column;
         align-items: center;
         margin-right: 0;
+        margin: auto;
     }
     .rgpd-score, .rgpd-svg {
         padding-top: 10px;
@@ -2127,3 +2182,5 @@ footer {
     }
   }
   
+
+  /* FAIRE DES ANIMATIONS + NAVBAR FONCTIONNELLE + HOVER BUTTON + ??? */
