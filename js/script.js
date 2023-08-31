@@ -31,61 +31,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// Menu hamburger V2 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Ouvre ou ferme le menu hamburger
+    const menuHamburger = document.querySelector('.menu-hamburger');
+    const sidebarMenu = document.createElement('div');
+    sidebarMenu.classList.add('sidebar-menu');
+  
+    // Copier le contenu du menu actuel dans le nouveau menu latéral
+    const navbarMenus = document.querySelector('.navbar__menus').cloneNode(true);
+    sidebarMenu.appendChild(navbarMenus);
+  
+    // Ajoutez le nouveau menu latéral au DOM
+    document.body.appendChild(sidebarMenu);
+  
+    menuHamburger.addEventListener('click', function() {
+      sidebarMenu.classList.toggle('open');
+      menuHamburger.classList.toggle('toggle');
+    });
+  });
+  
+  
 
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const dropdownTriggers = document.querySelectorAll('.has-dropdown');
-//     let timer; // Ajout d'un timer
-
-//     dropdownTriggers.forEach(trigger => {
-//         trigger.addEventListener('mouseenter', function() {
-//             clearTimeout(timer); // Annuler le timer précédent
-//             const dropdownClass = 'dropdown-' + this.textContent.toLowerCase();
-//             const dropdownElement = document.querySelector(`.${dropdownClass}`);
-
-//             if (dropdownElement) {
-//                 dropdownElement.style.display = 'flex';
-//                 dropdownElement.style.zIndex = 100;
-//                 dropdownElement.style.transition = 'all 0.3s ease-in-out';
-//             }
-
-//             // Vérifier si un autre élément est en survol
-//             const otherDropdownElement = document.querySelector('.dropdown.flex');
-//             if (otherDropdownElement) {
-//                 // Annuler le timer et fermer le menu déroulant
-//                 clearTimeout(timer);
-//                 otherDropdownElement.style.display = 'none';
-//             }
-//         });
-
-//         trigger.addEventListener('mouseleave', function() {
-//             const dropdownClass = 'dropdown-' + this.textContent.toLowerCase();
-//             const dropdownElement = document.querySelector(`.${dropdownClass}`);
-
-//             // Annuler le timer
-//             clearTimeout(timer);
-
-//             // Fermer le menu déroulant après 0.3 seconde
-//             timer = setTimeout(() => {
-//                 if (dropdownElement) {
-//                     dropdownElement.style.display = 'none';
-//                 }
-//             }, 300);
-//         });
-//     });
-
-//     // Annuler la fermeture du menu si la souris est dans la zone du menu déroulant
-//     document.querySelectorAll('.dropdown').forEach(dropdown => {
-//         dropdown.addEventListener('mouseenter', () => {
-//             clearTimeout(timer);
-//         });
-//         dropdown.addEventListener('mouseleave', function() {
-//             dropdown.style.display = 'none';
-//             dropdown.style.zIndex = 0;
-//         });
-//     });
-// });
 
 // Menu hamburger
 

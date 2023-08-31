@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
             </ul>
             <ul class="navbar__menu navbar__menu--a">
                 <li>
-                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false" id="Solutions">Solutions</a>
                     <div class="dropdown dropdown-solutions" aria-labelledby="Solutions">
                         <ul class="dropdown-list">
                             <li class="dropdown-item"><a href="#">Centre de formation</a></li>
@@ -36,7 +36,7 @@
                     </div>
                 </li>                                
                 <li>
-                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false" id="Services">Services</a>
                     <div class="dropdown dropdown-services" aria-labelledby="Services">
                         <ul class="dropdown-list">
                             <li class="dropdown-item"><a href="#">Accompagnement</a></li>
@@ -48,7 +48,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Entreprise</a>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false" id="Entreprise">Entreprise</a>
                     <div class="dropdown dropdown-entreprise" aria-labelledby="Entreprise">
                         <ul class="dropdown-list">
                             <li class="dropdown-item"><a href="#">Qui sommes-nous ?</a></li>
@@ -59,7 +59,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Ressources</a>
+                    <a href="#" class="has-dropdown" aria-haspopup="true" aria-expanded="false" id="Ressources">Ressources</a>
                     <div class="dropdown dropdown-ressources" aria-labelledby="Ressources">
                         <ul class="dropdown-list">
                             <li class="dropdown-item"><a href="#">Livres blancs</a></li>
@@ -73,29 +73,13 @@
             </ul>
         </div>
         <div class="navbar__logo-container">
-            <img src="assets/logo.png" alt="Logo de Mission RGPD" class="navbar__logo" />
+            <img src="assets/logo.png" alt="Logo de Mission RGPD" class="navbar__logo">
             <div class="menu-hamburger">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-        </div>
-        <!-- Menu Principal -->
-        <div class="navbar__submenu">
-            <ul>
-            <li class="has-dropdown">Solutions</li>
-            <li class="has-dropdown">Services</li>
-            <li class="has-dropdown">Entreprise</li>
-            <li class="has-dropdown">Ressources</li>
-            <li>Blog</li>
-            <li>Contact</li>
-            <li>Faire mon diagnostic RGPD</li>
-            <li>Calculer mes économies</li>
-            <li><button class="button button--trial">Essai gratuit</button></li>
-            <li><button class="button button--demo">Demander une démo</button></li>
-            <li><a href="#" class="login-link">Se connecter</a></li>
-            </ul>
-        </div>
+        </div>       
         <div class="navbar__contact">
             <div>
                 <p>Contactez-nous 02 59 59 32 91</p>
@@ -108,70 +92,6 @@
                 <button class="button button--trial">Essai gratuit</button>
                 <button class="button button--demo">Demander une démo</button>
             </div>
-             <!-- Sous-menu (visible uniquement sur mobile) -->
-            <!-- <div class="submenu" id="submenu-solutions">
-                <a href="#" class="go-back"><i class="fas fa-arrow-left"></i> Retour</a>
-                <h3>Solution</h3>
-                <ul class="submenu-items">
-                    <li><a href="#">La solution Mission RGPD</a></li>
-                    <li><a href="#">Centre de formation</a></li>
-                    <li><a href="#">Campings</a></li>
-                    <li><a href="#">Associations</a></li>
-                    <li><a href="#">Ressources Humaines</a></li>
-                    <li><a href="#">Experts comptables</a></li>
-                    <li><a href="#">E-commerce</a></li>
-                    <li><a href="#">Immobilier</a></li>
-                    <li><a href="#">Conseil</a></li>
-                </ul>
-            </div> -->
-                    <!-- Sous-menu pour "Services" -->
-            <!-- <div class="submenu" id="submenu-services">
-                <a href="#" class="go-back"><i class="fas fa-arrow-left"></i> Retour</a>
-                <h3>Services</h3>
-                <ul class="submenu-items">
-                    <li><a href="#">La solution Mission RGPD</a></li>
-                    <li><a href="#">Centre de formation</a></li>
-                    <li><a href="#">Campings</a></li>
-                    <li><a href="#">Associations</a></li>
-                    <li><a href="#">Ressources Humaines</a></li>
-                    <li><a href="#">Experts comptables</a></li>
-                    <li><a href="#">E-commerce</a></li>
-                    <li><a href="#">Immobilier</a></li>
-                    <li><a href="#">Conseil</a></li>
-                </ul>
-            </div> -->
-                    <!-- Sous-menu pour "Entreprise" -->
-            <!-- <div class="submenu" id="submenu-entreprise">
-                <a href="#" class="go-back"><i class="fas fa-arrow-left"></i> Retour</a>
-                <h3>Entreprise</h3>
-                <ul class="submenu-items">
-                    <li><a href="#">La solution Mission RGPD</a></li>
-                    <li><a href="#">Centre de formation</a></li>
-                    <li><a href="#">Campings</a></li>
-                    <li><a href="#">Associations</a></li>
-                    <li><a href="#">Ressources Humaines</a></li>
-                    <li><a href="#">Experts comptables</a></li>
-                    <li><a href="#">E-commerce</a></li>
-                    <li><a href="#">Immobilier</a></li>
-                    <li><a href="#">Conseil</a></li>
-                </ul>
-            </div> -->
-                    <!-- Sous-menu pour "Ressources" -->
-            <!-- <div class="submenu" id="submenu-ressources">
-                <a href="#" class="go-back"><i class="fas fa-arrow-left"></i> Retour</a>
-                <h3>Ressources</h3>
-                <ul class="submenu-items">
-                    <li><a href="#">La solution Mission RGPD</a></li>
-                    <li><a href="#">Centre de formation</a></li>
-                    <li><a href="#">Campings</a></li>
-                    <li><a href="#">Associations</a></li>
-                    <li><a href="#">Ressources Humaines</a></li>
-                    <li><a href="#">Experts comptables</a></li>
-                    <li><a href="#">E-commerce</a></li>
-                    <li><a href="#">Immobilier</a></li>
-                    <li><a href="#">Conseil</a></li>
-                </ul>
-            </div> -->
         </div>
     </nav>
     </div>
@@ -181,11 +101,11 @@
   <section class="header-section">
     <div class="header-content">
       <div class="rgpd-score">
-        <h1>
+        <h2>
             <span>Commencez dès</span>
             <span>aujourd'hui votre mise</span>
             <span>en conformité RGPD</span>
-        </h1>
+        </h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, similique autem. Itaque delectus velit dolores cupiditate voluptatum dolore magni, autem sunt dolorem expedita maxime facilis neque aliquid assumenda unde explicabo.</p>
           <div class="buttons-container">
             <button class="button button--score">Calculer mon score RGPD</button>
@@ -195,21 +115,21 @@
           </div>
       </div>
       <div class="rgpd-svg">
-          <img src="assets/header-sectionsvg.svg" alt="Illustration RGPD" />
+          <img src="assets/header-sectionsvg.svg" alt="Illustration RGPD">
       </div>
     </div>
     <div class="border-line"></div>
     <div class="ask-demo">
         <div class="stat">
-            <h1>250+</h1>
+            <h2>250+</h2>
             <p>clients satisfaits</p>
         </div>
         <div class="stat">
-            <h1>2M€</h1>
+            <h2>2M€</h2>
             <p>d'économies pour nos clients</p>
         </div>
         <div class="stat">
-            <h1>15</h1>
+            <h2>15</h2>
             <p>secteurs d'activités couverts</p>
         </div>
         <div class="stat">
@@ -220,7 +140,7 @@
 
   <section class="services">
         <div class="prestations">
-            <h1>Nos prestations pensées <span class="highlight">pour vous</span></h1>
+            <h2>Nos prestations pensées <span class="highlight">pour vous</span></h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis aperiam similique quasi ut. Possimus, suscipit quos obcaecati consectetur iure eos?
             Aperiam dolorum dolores perspiciatis reprehenderit, neque et fugiat voluptas, doloribus dolore suscipit, fugit vitae totam vel repellat rem harum a.
             </p>
@@ -228,19 +148,19 @@
         <div class="cards">
             <div class="card">
                 <img src="assets/Layer_1.png" alt="Image 1">
-                <h1>Une solution clé en main pour une mise en conformité rapide</h1>
+                <h2>Une solution clé en main pour une mise en conformité rapide</h2>
                 <p>Nous avons tout prévu pour faciliter votre quotidien et vous faire gagner du temps : notre plateforme est simple d’utilisation et pré-remplie. Vous pourrez notamment y compléter en quelques heures une cartographie de l’ensemble de vos données personnelles et de leur traitement et y retrouvez nos fiches et supports pratiques.</p>
                 <button class="button">Découvrir notre solution</button>
             </div>
             <div class="card">
-                <img src="assets/Group 216.png" alt="Image 2">
-                <h1>Une équipe d'experts</h1>
+                <img src="assets/Group216.png" alt="Image 2">
+                <h2>Une équipe d'experts</h2>
                 <p>Nous avons tout prévu pour faciliter votre quotidien et vous faire gagner du temps : notre plateforme est simple d’utilisation et pré-remplie. Vous pourrez notamment y compléter en quelques heures une cartographie de l’ensemble de vos données personnelles et de leur traitement et y retrouvez nos fiches et supports pratiques.</p>
                 <button class="button">Découvrir notre solution</button>
             </div>
             <div class="card">
-                <img src="assets/Group 238.png" alt="Image 3">
-                <h1>Un accompagnement complet</h1>
+                <img src="assets/Group238.png" alt="Image 3">
+                <h2>Un accompagnement complet</h2>
                 <p>Nous avons tout prévu pour faciliter votre quotidien et vous faire gagner du temps : notre plateforme est simple d’utilisation et pré-remplie. Vous pourrez notamment y compléter en quelques heures une cartographie de l’ensemble de vos données personnelles et de leur traitement et y retrouvez nos fiches et supports pratiques.</p>
                 <button class="button">Découvrir notre solution</button>
             </div>
@@ -249,7 +169,7 @@
     <section class="mission-rgpd">
         <div class="solution-rgpd">
             <div class="decouvrir-rgpd">
-                <h1><span class="part1">Mission RGPD</span> <span class="part2 highlight">c'est quoi ?</span></h1>
+                <h2><span class="part1">Mission RGPD</span> <span class="part2 highlight">c'est quoi ?</span></h2>
                 <ul>
                     <li><p><strong>Un outil complet</strong> pour votre mise en conformité RGPD</p></li>
                     <li><p><strong>Un accès à l'ensemble des 7 étapes automatisées </strong> pour vous mettre en conformité</p></li>
@@ -259,36 +179,36 @@
                     <li><p>Une <strong> maintenance technique et SAV </strong></p></li>
                 </ul>
                 <button class="button button--solution">Découvrir notre solution</button>
-                <img src="assets/undraw_secure_files_re_6vdh 1.svg" alt="Image 4">
+                <img src="assets/undraw_secure_files_re_6vdh1.svg" alt="Image 4">
             </div>
             
-            <div class="stock"><img src="assets/AdobeStock_548538123_Preview 1.png" alt=""></div>
+            <div class="stock"><img src="assets/AdobeStock_548538123_Preview1.png" alt=""></div>
         </div>
     </section>
-    <section class="full-width-video">
-        <video controls autoplay muted loop poster="assets/Rectangle 60.png">
+    <div class="full-width-video">
+        <video controls autoplay muted loop poster="assets/Rectangle60.png">
             <source src="votre-video.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la vidéo.
         </video>
-    </section>
+    </div>
     <div class="wrapper">
         <section class="test-mission">
             <div class="test">
-                <h1><span class="part1">Testez Mission RGPD </span> grâce à notre<span class="highlight"> essai gratuit</span></h1>
+                <h2><span class="part1">Testez Mission RGPD </span> grâce à notre<span class="highlight"> essai gratuit</span></h2>
                 <p>Lorem ipsum dolor sit amett consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
                 <button class="button button--test">Essai gratuit</button>
             </div>
             <div class="test-img">
-                <img src="assets/Group 381.svg" alt="Image 5">
+                <img src="assets/Group381.svg" alt="Image 5">
             </div>
         </section>
             <div class="temoignage">
                 <div class="temoignage__img">
                     <h1><span class="part1">Nos clients </span>témoignent</h1>
-                    <img src="assets/undraw_online_message_re_3m5v 1.png" alt="Image 6">
+                    <img src="assets/undraw_online_message_re_3m5v1.png" alt="Image 6">
                 </div>
                     <div class="temoignage__text">
-                        <img src="assets/image 1.png" alt="Image au-dessus du slider">  
+                        <img src="assets/image1.png" alt="Image au-dessus du slider">  
                         <div class="slider-container">
                             <div class="slider">
                                 <div class="slide">
@@ -319,7 +239,7 @@
     </div>
 
     <section class="question-rgpd">
-        <h1>Une question sur le RGPD ?</h1>
+        <h2>Une question sur le RGPD ?</h2>
         <div class="question">
             <div class="question__cards-container">
                 <div class="question__cards">
@@ -337,17 +257,17 @@
             </div>
         </div>
         <button class="button button--question">Découvrir toutes les questions</button>
-        <img src="assets/undraw_questions_re_1fy7 1.png" alt="Image 7">
+        <img src="assets/undraw_questions_re_1fy71.png" alt="Image 7">
     </section>
 
     <section class="articles-rgpd-bg">
         <div class="articles-rgpd">
-          <h1><span class="part1">Découvrez nos derniers </span>articles sur le RGPD</h1>
+          <h2><span class="part1">Découvrez nos derniers </span>articles sur le RGPD</h2>
           <div class="article-card-container">
             <!-- Card 1 -->
             <div class="article-card">
               <a href="#">
-                  <img src="assets/AdobeStock_548538123_Preview 1.png" alt="Article Image 1">
+                  <img src="assets/AdobeStock_548538123_Preview1.png" alt="Article Image 1">
                   <p class="article-date">02 Sept 2022</p>
                   <p class="article-tag">#categorie 1</p>
                   <h2>Lorem Ipsum dolor sit amet, consectur vacra despinas calacuta pradia</h2>
@@ -357,7 +277,7 @@
             <!-- Card 2 -->
             <div class="article-card">
               <a href="#">
-                  <img src="assets/AdobeStock_548538123_Preview 1.png" alt="Article Image 2">
+                  <img src="assets/AdobeStock_548538123_Preview1.png" alt="Article Image 2">
                   <p class="article-date">02 Sept 2022</p>
                   <p class="article-tag">#categorie 1</p>
                   <h2>Lorem Ipsum dolor sit amet, consectur vacra despinas calacuta pradia</h2>
@@ -367,7 +287,7 @@
             <!-- Card 3 -->
             <div class="article-card">
               <a href="#">
-                  <img src="assets/AdobeStock_548538123_Preview 1.png" alt="Article Image 3">
+                  <img src="assets/AdobeStock_548538123_Preview1.png" alt="Article Image 3">
                   <p class="article-date">02 Sept 2022</p>
                   <p class="article-tag">#categorie 1</p>
                   <h2>Lorem Ipsum dolor sit amet, consectur vacra despinas calacuta pradia</h2>
@@ -377,7 +297,7 @@
             <!-- Card 4 -->
             <div class="article-card">
               <a href="#">
-                  <img src="assets/AdobeStock_548538123_Preview 1.png" alt="Article Image 4">
+                  <img src="assets/AdobeStock_548538123_Preview1.png" alt="Article Image 4">
                   <p class="article-date">02 Sept 2022</p>
                   <p class="article-tag">#categorie 1</p>
                   <h2>Lorem Ipsum dolor sit amet, consectur vacra despinas calacuta pradia</h2>
@@ -393,11 +313,11 @@
 
     <section class="equipe-section">
         <div class="equipe">
-            <h1>Notre équipe <span class="highlight">d'expert</span></h1>
+            <h2>Notre équipe <span class="highlight">d'expert</span></h2>
             <div class="equipe__cards-container">
                 <div class="equipe__cards has-popup" data-popup-id="popup1">
                     <a href="#" class="link-banner">
-                        <img src="assets/Rectangle 19.png" alt="Image 8">
+                        <img src="assets/Rectangle19.png" alt="Image 8">
                         <span class="link-banner-text">Voir le témoignage</span>
                     </a>
                     <h2>Nom Prénom</h2>
@@ -405,7 +325,7 @@
                     <!-- Popup pour cette carte -->
                     <div class="popup">
                         <div class="popup__content">
-                            <img src="assets/Rectangle 19.png" class="popup__image" alt="Background Image"> 
+                            <img src="assets/Rectangle19.png" class="popup__image" alt="Background Image"> 
                             <div class="text-container">
                                 <img src="assets/Vector.png" class="vector-image" alt="Vector Image"> 
                                 <p class="lorem-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facere culpa quidem odio itaque atque optio iusto pariatur quibusdam illo aliquam aspernatur necessitatibus magni mollitia, vero totam ratione ullam dolorum.
@@ -421,7 +341,7 @@
                 </div>
                 <div class="equipe__cards has-popup" data-popup-id="popup2">
                     <a href="#" class="link-banner">
-                        <img src="assets/Rectangle 20.png" alt="Image 9">
+                        <img src="assets/Rectangle20.png" alt="Image 9">
                         <span class="link-banner-text">Voir le témoignage</span>
                     </a>
                     <h2>Nom Prénom</h2>
@@ -429,7 +349,7 @@
                     <!-- Popup pour cette carte -->
                     <div class="popup">
                         <div class="popup__content">
-                            <img src="assets/Rectangle 20.png" class="popup__image" alt="Background Image"> 
+                            <img src="assets/Rectangle20.png" class="popup__image" alt="Background Image"> 
                             <div class="text-container">
                                 <img src="assets/Vector.png" class="vector-image" alt="Vector Image"> 
                                 <p class="lorem-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facere culpa quidem odio itaque atque optio iusto pariatur quibusdam illo aliquam aspernatur necessitatibus magni mollitia, vero totam ratione ullam dolorum.
@@ -444,22 +364,22 @@
                     </div> 
                 </div>
                 <div class="equipe__cards">
-                    <img src="assets/Rectangle 21.png" alt="Image 8">
+                    <img src="assets/Rectangle21.png" alt="Image 8">
                     <h2>Nom Prénom</h2>
                     <p>Nom du poste</p>
                 </div>
                 <div class="equipe__cards">
-                    <img src="assets/image 2.png" alt="Image 8">
+                    <img src="assets/image2.png" alt="Image 8">
                     <h2>Nom Prénom</h2>
                     <p>Nom du poste</p>
                 </div>
                 <div class="equipe__cards">
-                    <img src="assets/image 3.png" alt="Image 8">
+                    <img src="assets/image3.png" alt="Image 8">
                     <h2>Nom Prénom</h2>
                     <p>Nom du poste</p>
                 </div>
                 <div class="equipe__cards">
-                    <img src="assets/image 4.png" alt="Image 8">
+                    <img src="assets/image4.png" alt="Image 8">
                     <h2>Nom Prénom</h2>
                     <p>Nom du poste</p>
                 </div>
@@ -471,9 +391,9 @@
       <section class="newsletter">
         <div class="newsletter__container">
             <div class="newsletter__content">
-                <h1>Inscrivez-vous <span class="highlight">à notre <span class="part1"> newsletter</span></span></h1>
+                <h2>Inscrivez-vous <span class="highlight">à notre <span class="part1"> newsletter</span></span></h2>
                 <p>En renseignant votre adresse mail, vous acceptez de recevoir chaque semaine nos derniers articles de blog par courrier électronique et vous prenez connaissance de notre Politique de confidentialité.</p>
-                <form action="">
+                <form action="#">
                     <input type="email" placeholder="Renseignez votre email">
                     <div class="checkbox-container">
                         <input type="checkbox" id="consent" required>
@@ -483,8 +403,8 @@
                 </form>
             </div>
             <div class="newsletter__img">
-                <img class="bg" src="assets/Ellipse 9.png" alt="Image de fond">
-                <img class="fg" src="assets/undraw_subscribe_vspl 1.png" alt="Image de premier plan">
+                <img class="bg" src="assets/Ellipse9.png" alt="Image de fond">
+                <img class="fg" src="assets/undraw_subscribe_vspl1.png" alt="Image de premier plan">
             </div>
         </div>
     </section>
