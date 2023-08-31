@@ -69,7 +69,7 @@
     display: flex;
     justify-content: center; /* centre le logo */
     align-items: center;
-    position: relative; /* car le menu hamburger sera positionné par rapport à ce conteneur */
+    position: relative; 
 }
 
 .navbar__logo {
@@ -98,7 +98,7 @@
 }
 
 .navbar__contact > div > p {
-    margin-right: 10px; /* ou toute autre valeur qui vous convient */
+    margin-right: 10px; 
 }
 
 
@@ -320,7 +320,7 @@
 
 
 
-/* Lorsque le menu est ouvert, on ajoute la classe .open au menu hamburger */
+
 .menu-hamburger.open .bar1 {
     transform: rotate(-45deg) translate(-4px, 4px);
 }
@@ -339,70 +339,6 @@
 
   
 
-/* Styles pour le sous-menu */
-
-.navbar__submenu{
-    display: none;
-}
-
-.submenu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2F2E41;
-    z-index: 1000;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.submenu.active {
-    display: block;
-}
-
-.go-back {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    text-decoration: none;
-    background-color: #00EA99;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.submenu h3 {
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.submenu-items {
-    list-style: none;
-    padding: 0;
-}
-
-.submenu-items li {
-    margin-bottom: 10px;
-}
-
-.submenu-items a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-}
-
-.submenu-items a:hover {
-    background-color: #00EA99;
-}
 
 /* PREMIERE SECTION */
 
@@ -832,18 +768,18 @@ body {
   .decouvrir-rgpd,
   .stock {
     flex: 1;
-    width: 35%; /* Vous pouvez ajuster ce pourcentage en fonction de vos besoins */
+    width: 35%; 
   }
   
   .solution-rgpd div {
     display: flex;
     flex-direction: column;
-    align-items: start; /* Aligne les éléments à gauche */
+    align-items: start; 
   }
   
   .button--solution {
     margin-top: 50px;
-    margin-bottom: 50px; /* Espacement entre le bouton et l'image */
+    margin-bottom: 50px;
   }
   
   .decouvrir-rgpd {
@@ -935,7 +871,7 @@ strong {
     }
   
     .decouvrir-rgpd img {
-      display: none;  /* Masquer l'image */
+      display: none;  
     }
   }
 
@@ -1005,7 +941,7 @@ strong {
         height: auto;
     }
     .test-img img {
-        width: 300px; /* Réduit la taille à 80% */
+        width: 300px; 
         position: static;
         padding: 0;
         text-align: center;
@@ -1032,7 +968,7 @@ strong {
 }
 
 @media (max-width: 768px) {
-    /* Réduire la taille du texte */
+
     .test h2 {
         font-size: 32px;
     }
@@ -1041,7 +977,6 @@ strong {
         font-size: 12px;
     }
 
-    /* Réduire la taille de l'image */
     .test-img img, .temoignage__img img {
         display: none;
         }
@@ -1067,7 +1002,6 @@ strong {
 }
 
 @media (max-width: 480px) {
-    /* Réduire encore la taille du texte */
     .test h2 {
         font-size: 24px;
     }
@@ -1076,12 +1010,10 @@ strong {
         font-size: 11px;
     }
 
-    /* Réduire encore la taille de l'image */
     .test-img img, .temoignage__img img {
         display: none;
     }
 
-    /* Masquer des éléments moins essentiels si nécessaire */
     .temoignage__img img {
         display: none;
     }
@@ -1323,7 +1255,7 @@ button:disabled {
     flex: 1;
     margin: 5px;
     padding: 10px;
-    height: 200px; /* Hauteur fixe pour les rectangles */
+    height: 200px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1410,7 +1342,7 @@ button:disabled {
     }
   
     .question__cards {
-      height: auto; /* Ajustement de la hauteur */
+      height: auto; 
     }
   
     .question-rgpd img {
@@ -1434,7 +1366,7 @@ button:disabled {
     }
   
     .question-rgpd img {
-      display: none; /* Masquer l'image pour économiser de l'espace */
+      display: none; 
     }
   
     .question__cards p {
@@ -1615,7 +1547,7 @@ button:disabled {
 
 
   .inner-space {
-    height: 15rem;  /* Vous pouvez ajuster cette valeur pour obtenir l'espacement désiré */
+    height: 15rem;  
 }
 
 
@@ -1663,9 +1595,9 @@ button:disabled {
 
 
 .equipe__cards img, .article-card img {
-    object-fit: cover; /* Ajuste l'image pour remplir le contenu */
-    width: 100%; /* largeur complète du conteneur parent */
-    height: 100%; /* hauteur complète du conteneur parent */
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%; 
 }
 
 .link-banner {
@@ -1679,12 +1611,12 @@ button:disabled {
 .link-banner img {
     max-width: 100%;
     display: block;
-    height: auto; /* Hauteur automatique pour maintenir l'aspect ratio */
+    height: auto; 
 }
 
 .link-banner-text {
     position: absolute;
-    height: 45px;  /* ou 20% de la hauteur de la carte */
+    height: 45px; 
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1804,7 +1736,7 @@ button:disabled {
 
     .text-container {
         flex: 1; /* pour s'assurer que le conteneur de texte prend tout l'espace restant */
-        overflow-y: auto; /* pour ajouter un scroll si le texte est trop long */
+        overflow-y: auto; 
     }
 
     .lorem-text {
@@ -2152,26 +2084,26 @@ footer {
 @media (max-width: 704px) {
 .footer__content {
       flex-direction: column;
-      align-items: flex-start;  /* Changé de center à flex-start */
+      align-items: flex-start;  
     }
     .footer__content__logo {
       flex-direction: column;
-      justify-content: center;  /* Changé de center à flex-start */
+      justify-content: center;  
       width: 100%;
     }
     .footer__content__links {
       flex-direction: column;
-      align-items: flex-start;  /* Changé de center à flex-start */
+      align-items: flex-start;  
       width: 100%;
     }
     .footer__content__links__column {
       margin-top: 1rem;
       margin-bottom: 1rem;
-      align-items: flex-start;  /* Changé de center à flex-start */
+      align-items: flex-start;  
     }
     .button__footer__button {
       flex-direction: column;
-      align-items: flex-start;  /* Changé de center à flex-start */
+      align-items: flex-start;  
     }
 }
   
@@ -2196,5 +2128,3 @@ footer {
     }
   }
   
-
-  /* FAIRE DES ANIMATIONS + NAVBAR FONCTIONNELLE + HOVER BUTTON + ??? */

@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let percentage = 100 / slides.length; // 100% divisé par le nombre total de slides
 
     // Initialisation
-    slider.style.width = `${100 * slides.length}%`; // Ajuster la largeur totale du conteneur
+    slider.style.width = `${100 * slides.length}%`; 
     slides.forEach((slide) => {
-        slide.style.flex = `0 0 ${percentage}%`; // Ajuster la largeur de chaque slide
+        slide.style.flex = `0 0 ${percentage}%`; 
     });
     updateButtons();
 
